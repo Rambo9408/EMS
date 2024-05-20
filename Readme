@@ -1,0 +1,13 @@
+# EMPLOYEE MANAGEMENT SYSTEM
+In this project, I Ram kumar Mishra have created node CRUD application with express and mongodb AS BACKEND DATABASE.
+
+#### To Run this project Clone it and install modules using
+```
+npm install
+```
+
+Then Create config.env file and create PORT and MONGO_URI Variable and specify Value.
+That's it. aND To execute this project just type
+```
+npm start
+```

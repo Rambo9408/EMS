@@ -1,0 +1,25 @@
+<form action="/api/employees" method="POST" id="add_employee">
+    <div class="new_employee">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value=""  pattern="[A-Za-z ]+" title="Name can only contain alphabets and spaces" required>
+            <small class="text-muted">Name can't be blank and should contain only alphabets and spaces.</small>
+        </div>
+        <div class="form-group">
+            <label for="email" class="text-light">Email</label>
+            <input type="email" name="email" value=""  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <small class="text-muted">Please enter a valid email address.</small>
+        </div>
+        <div class="form-group">
+            <label for="mobile" class="text-light">Mobile No</label>
+            <input type="text" name="mobile" value=""  pattern="[0-9]{10}" title="Mobile number should be 10 digits" required>
+            <small class="text-muted">Please enter a 10-digit mobile number.</small>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

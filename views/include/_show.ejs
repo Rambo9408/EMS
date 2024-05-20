@@ -1,0 +1,16 @@
+<% for(var i = 0; i < employees.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= employees[i].name %></td>
+        <td><%= employees[i].email %></td>
+        <td><%= employees[i].mobile %></td>
+        <td>
+            <button href="/update-employee?id=<%= employees[i]._id %>" class="btn border-shadow update">
+                <span class="text-gradient">Edit</span>
+            </button>
+            <button class="btn border-shadow delete" data-id="<%= employees[i]._id %>">
+                <span class="text-gradient">Delete</span>
+            </button>
+        </td>
+    </tr>
+<% } %>

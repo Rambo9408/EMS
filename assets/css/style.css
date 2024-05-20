@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&family=Protest+Riot&display=swap');
+
+:root {
+    --dark: #2b2d42;
+    --light: #adb5bd;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+    --primary: #007bff;
+    --primary-hover: #0056b3;
+    --secondary: #16db93;
+    --secondary-hover: #12a979;
+    --background: #f7f7f7;
+    --white: #fff;
+    --error: #ff4d4f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+.container {
+    max-width: 850px;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.border-shadow {
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: var(--primary-hover);
+}
+
+#search-error {
+    color: var(--error);
+    display: none;
+    margin-top: 5px;
+}
+
+#header nav {
+    background-color: #2293a1;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#site-main {
+    margin-top: 1em;
+    font-family: 'Barlow', sans-serif;
+}
+
+#site-main .container .box-nav > a {
+    font-size: 1em;
+    padding: 0.5em 1em;
+}
+
+#site-main .container form {
+    margin: 2em 0;
+}
+
+table {
+    border-spacing: 0px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td, .table th {
+    padding: 0.75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td > a.btn {
+    padding: 0.3em 1em;
+    font-size: 1.1em;
+    margin: 0 0.2em;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table tr:hover td > a {
+    box-shadow: none;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: var(--dark);
+    border-color: #32383e;
+}
+
+@media only screen and (max-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid var(--border);
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    td:before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--light);
+    }
+}
+
+.form-title {
+    margin-top: 2em;
+}
+
+.form-title > h2 {
+    padding: 0.5em 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.new_employee {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#update_employee .form-group,
+#add_employee .form-group {
+    margin: 0.4em 0;
+}
+
+#update_employee .form-group input[type="text"],
+#update_employee .form-group input[type="email"],
+#add_employee .form-group input[type="text"],
+#add_employee .form-group input[type="email"] {
+    width: 100%;
+    padding: 0.6em 1em;
+    margin: 0.5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: 0.2em;
+    transition: border-color 0.3s ease;
+}
+
+#update_employee .form-group input[type="text"]:focus,
+#update_employee .form-group input[type="email"]:focus,
+#add_employee .form-group input[type="text"]:focus,
+#add_employee .form-group input[type="email"]:focus {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+#update_employee .form-group .text-muted,
+#add_employee .form-group .text-muted {
+    color: var(--light);
+    font-size: 0.875em;
+}
+
+.radio input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio input[type='radio'] + .radio-label:before {
+    content: "";
+    background: var(--border-btn);
+    border-radius: 100%;
+    border: 1px solid var(--border);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    margin-right: 0.5em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    transition: all 250ms ease;
+}
+
+.radio input[type='radio']:checked + .radio-label:before {
+    background-color: var(--secondary);
+    box-shadow: inset 0 0 0 4px var(--white);
+}
+
+.radio input[type='radio']:focus + .radio-label:before {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.radio input[type='radio']:disabled + .radio-label:before {
+    box-shadow: inset 0 0 0 4px #e9ecef;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+}
+
+#update_employee .form-group .btn,
+#add_employee .form-group .btn {
+    width: 100%;
+    padding: 0.9em 1em;
+    background-color: var(--secondary);
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0.2em;
+    margin: 0.5em 0;
+    color: var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#update_employee .form-group .btn:hover,
+#add_employee .form-group .btn:hover {
+    background-color: var(--secondary-hover);
+    color: var(--white);
+}
