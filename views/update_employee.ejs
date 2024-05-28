@@ -21,17 +21,17 @@
                 <div class="form-group">
                     <label for="name" class="text-light">Name</label>
                     <input type="hidden" name="id" value="<%= employee._id %>">
-                    <input type="text" name="name" value="<%= employee.name %>" placeholder="Mark Stoenis" pattern="[A-Za-z ]+" title="Name can only contain alphabets and spaces" required>
+                    <input type="text" name="name" value="<%= employee.name %>" placeholder="" pattern="[A-Za-z ]+" title="Name can only contain alphabets and spaces" required>
                     <small class="text-muted">Name can't be blank and should contain only alphabets and spaces.</small>
                 </div>
                 <div class="form-group">
                     <label for="email" class="text-light">Email</label>
-                    <input type="email" name="email" value="<%= employee.email %>" placeholder="example@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <input type="email" name="email" value="<%= employee.email %>" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     <small class="text-muted">Please enter a valid email address.</small>
                 </div>
                 <div class="form-group">
                     <label for="mobile" class="text-light">Mobile No</label>
-                    <input type="text" name="mobile" value="" placeholder="1234567890" pattern="[0-9]{10}" title="Mobile number should be 10 digits" required>
+                    <input type="text" name="mobile" value="<%= employee.mobile %>" placeholder="" pattern="[0-9]{10}" title="Mobile number should be 10 digits" required>
                     <small class="text-muted">Please enter a 10-digit mobile number.</small>
                 </div>
 
